@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%block style%}
+
+{%endblock%}
+
+{%block content%}
+    <h1 class="set-header">{{day}}</h1>
+
+    {%for i in all%}
+    <div class="set-cont">
+        <div class="set-header">{{i.set}}</div>
+        <div class="set-workouts">
+            
+            {%for k  in i.workouts%}
+            <div class="set-workout">
+                <div class="set-workout-name">{{k}}</div>
+                <div class="set-workout-reps">x4 exs</div>
+            </div>
+            {%endfor%}
+        
+        </div>
+        <div class="set-button">
+            <a href="/ss/{{i.id}}"><button class="set-start-btn">Start!</button></a>
+        </div>
+    </div>
+    
+    
+
+    {%endfor%}
+   
+
+
+{%endblock%}

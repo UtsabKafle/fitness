@@ -1,0 +1,82 @@
+{%extends 'base.html'%}
+
+
+{%block style%}
+
+.workouts-cont{
+    margin: 19px;
+}
+
+.workout{
+    background-color: white;
+    padding: 4px;
+    height: 60px;
+    margin: 14px 0px; 
+    border-radius: 10px;
+}
+.workout-text{
+    float: left;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px;
+    color: rgb(66, 61, 66);
+}
+        
+.workout-form{
+    float: right;
+    padding: 10px;
+}
+.w-f-m{
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(46, 171, 175);
+    outline-color: rgb(46, 171, 175);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.wo-btn{
+width: 170px;
+height: 37px;
+background-color: transparent;
+padding: 3px;
+border:1px solid rgb(46, 171, 175);
+border-radius: 6px;
+cursor: pointer;
+font-size: 17px;
+font-weight: 600;
+color: rgb(46, 171, 175);
+margin: 10px 40vw;
+}
+.wo-btn:hover{
+background-color: rgb(46, 171, 175);
+color: white;
+border:none;
+}
+.check-box{
+    height:30px;
+    width:30px;
+    border-radius:9px;
+    color:red;
+}
+{%endblock%}
+{%block content%}
+
+<div class="workouts-cont">
+    <div class="set-header">{{set.name}}</div>
+    <form method="post">{%csrf_token%}
+    {%for i in workouts%}
+    <div class="workout">
+        <a href="/workout/{{i.id}}" target="_blank"><div class="workout-text">{{i.name}}</div></a>
+        <div class="workout-form">
+            <input type="checkbox" class="check-box">
+        </div>
+    </div>
+{%endfor%}
+    
+   <button class="wo-btn" type="submit">Done</button>
+</form>
+</div>
+
+
+{%endblock%}

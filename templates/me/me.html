@@ -1,0 +1,120 @@
+{%extends 'base.html'%}
+
+
+
+{%block style%}
+.workouts-cont{
+    margin: 10px 30vw;
+    /* background-color: tomato; */
+    padding: 30px;
+}
+
+.date-cont{
+    background-color: rgb(14, 224, 67);
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 3px;
+    cursor: pointer;
+}
+.date-cont:hover{
+    background-color: white;
+}
+
+.me-text{
+    color: white;
+    text-align: center;
+    font-weight: 800;
+}
+.me-workout-data{
+    margin:0px 30vw;
+    padding: 45px;
+}
+
+.me-workout{
+    height: 30px;
+    border:1px solid rgba(13, 214, 80, 0.651);
+    padding: 7px;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 6px;
+    color:white;
+    cursor: pointer;
+}
+.me-workout:hover{
+    background-color: white;
+    color: black;
+}
+
+{%endblock%}
+
+{%block content%}
+
+<div class="workouts-cont">
+
+    {%for i in dates%}
+    <a style="text-decoration:none;" href="d/{{i.year}}-{{i.month}}-{{i.day}}">
+    <div class="date-cont">
+        <div class="date">{{i.day}}</div>
+        <div class="month">
+            {%if i.month == 1%}
+                Jan
+            {%endif%}
+            {%if i.month == 2%}
+                Feb
+            {%endif%}
+            {%if i.month == 3%}
+                Mar
+            {%endif%}
+            {%if i.month == 4%}
+                Apr
+            {%endif%}
+            {%if i.month == 5%}
+                May
+            {%endif%}
+            {%if i.month == 6%}
+                Jun
+            {%endif%}
+            {%if i.month == 7%}
+                Jul
+            {%endif%}
+            {%if i.month == 8%}
+                Aug
+            {%endif%}
+            {%if i.month == 9%}
+                Sep
+            {%endif%}
+            {%if i.month == 10%}
+                Oct
+            {%endif%}
+            {%if i.month == 11%}
+                Nov
+            {%endif%}
+            {%if i.month == 12%}
+                Dec
+            {%endif%}
+        </div>
+    </div>
+</a>
+    {%endfor%}
+ 
+
+</div>
+<div class="me-text">
+   <div class="total-days">Total Days: <div class="set-workout-reps">{{total_days}}</div></div>
+   <div class="total-exercises">Total Exercise: <div class="set-workout-reps">{{total_workouts}}</div></div>
+   <div class="total-reps">Total reps: <div class="set-workout-reps">{{total_reps}}</div></div>
+</div>
+
+<div class="me-workout-data">
+    {%for i in all%}
+<div class="me-workout">
+    {{i.workout}} <div class="set-workout-reps">{{i.reps}}</div>
+</div>
+{%endfor%}
+
+</div>
+
+{%endblock%}

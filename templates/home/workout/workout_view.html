@@ -1,0 +1,90 @@
+{%extends 'base.html'%}
+{%block style%}
+        .workout-details{
+            width: 70vw;
+            height: 100vh;
+            float: left;
+            background-color: rgb(201, 195, 187);
+        }
+        .workout-form{
+            background-color: rgb(32, 30, 30);
+            width: 25vw;
+            height: 100vh;
+            float: right;
+        }
+        .workout-image{
+            height: 300px;
+            width: 600px;
+            z-index: 1;
+            left: -40px;
+            margin: 12px 115px;
+        }
+        .workout-texts{
+            margin: 1px 30px;
+        }
+        .workout-name{
+            font-weight: 900;
+            font-size: 40px;
+            color: rgb(44, 43, 43);
+        }
+        .workout-instruction{
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .workout-input{
+            width: 100px;
+            height: 40px;
+            outline-color: rgb(46, 171, 175);
+            border:2px solid rgb(244, 248, 248);
+            outline-color: rgb(46, 171, 175);
+            border-radius: 4px;
+            margin: 85px 48px -20px 48px;
+            text-align: center;
+
+        }
+        .workout-input:hover{
+            border: 2px solid rgb(46, 171, 175);
+        }
+        .form{
+            margin: 300px 20px;
+        }
+        .btn{
+            height: 40px;
+            width: 130px;
+            background-color: rgb(150, 144, 144);
+            border:none;
+            border-radius: 4px;
+            margin: 65px 35px;
+        }
+        .btn:hover{
+            background-color: rgb(46, 171, 175);
+            cursor: pointer;
+            color: white;
+        }
+{%endblock%}
+
+    {%block content%}
+    <div class="container">
+        <div class="workout-details">
+            <img class="workout-image" src="{{image.image.url}}" alt="">
+            <div class="workout-texts">
+                <div class="workout-name">{{workout.name}}</div>
+                <ul>
+                    {%for i in instructions%}
+                    <li class='workout-instruction'>{{i.instruction}}</li>
+                    {%endfor%}
+                </ul>
+            </div>
+        </div>
+        <div class="workout-form">
+            <form class="form" method="post">{%csrf_token%}
+                <input type="text" name="reps" placeholder="reps" class="workout-input" required>
+                <div class="button">
+                    <button type="submit" class="btn">Done!</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+    {%endblock%}

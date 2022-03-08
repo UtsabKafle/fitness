@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+
+{%block style%}
+.t-img{
+    height:300px;
+    width:300px;
+    display:inline;
+
+}
+.form-cont{
+    margin:10px 45vw;
+}
+
+.images-cont{
+    display:inline;
+    margin:50px;
+    cursor:pointer;
+    
+}
+.images-cont .img-date{
+    color:white;
+    display:none;
+    top:106px;
+    right:57px;
+}
+.images-cont:hover .img-date{
+        display:inline;
+        position:fixed;
+        background-color:#f1f1a3a6;
+
+}
+{%endblock%}
+{%block content%}
+<div class="form-cont">
+    <form method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form.as_p}}
+
+        <button class="set-start-btn" type="submit">Upload</button>
+    </form>
+</div>
+    <br>
+    {%for i in images%}
+    <div class="images-cont">
+    
+    <img src='{{i.photo.url}}' class="t-img">
+    <div class="img-date">{{i.day}}</div>
+
+</div>
+
+    {%endfor%}
+
+    {%endblock%}

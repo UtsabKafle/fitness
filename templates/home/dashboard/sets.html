@@ -1,0 +1,54 @@
+{%extends 'base.html'%}
+{%block style%}
+
+
+
+
+
+{%endblock%}
+
+
+
+{%block content%}
+{%for i in sets%}
+
+    
+    <div class="set-cont">
+        <div class="set-header">{{i.name}}</div>
+        <div class="set-workouts">
+            <div class="set-workout">
+                <div class="set-workout-name">PushUps</div>
+                <div class="set-workout-reps">x10</div>
+            </div>
+            <div class="set-workout">
+                <div class="set-workout-name">SitUps</div>
+                <div class="set-workout-reps">x20</div>
+            </div>
+           
+            <div class="set-workout">
+                <div class="set-workout-name">Inclined Pushups</div>
+                <div class="set-workout-reps">x4</div>
+            </div>
+            <div class="set-workout">
+                <div class="set-workout-name">Plank</div>
+                <div class="set-workout-reps">x60s</div>
+            </div>
+        </div>
+        <div class="set-button">
+            <a href="/s/{{i.id}}">
+                <button class="set-start-btn">Start!</button>
+                </a>
+        </div>
+    </div>
+
+
+
+
+{%endfor%}
+
+
+{%endblock%}
+
+
+
+   

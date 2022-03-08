@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout view</title>
+    <style>
+        .navbar{
+            background-color: rgb(46, 171, 175);
+            height: 70px;
+            top: 0px;
+        }
+        body{
+            background-color: rgb(32, 30, 30);
+            
+        }
+        
+
+
+
+.set-cont{
+    /* height: 300px; */
+    background-color: white;
+    margin: 27px;
+    width: 300px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 6px 4px 20px 0px #aaa6a6a4;
+    background-color: rgb(223, 231, 231);
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+}
+
+.set-header{
+font-size: 35px;
+font-weight: 800;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color:rgb(87, 81, 78);
+}
+
+.set-workout{
+margin: 5px;
+}
+.set-workout-name{
+display: inline;
+font-size: 20px;
+font-weight: 700;
+color: rgb(83, 82, 82);
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.set-workout-reps{
+color: rgb(32, 170, 175);
+display: inline;
+font-size: 20px;
+font-weight: 800;
+}
+
+.set-button{
+margin: 24px 0px 15px 0px;
+}
+
+.set-start-btn{
+width: 170px;
+height: 37px;
+background-color: transparent;
+padding: 3px;
+border:1px solid rgb(46, 171, 175);
+border-radius: 6px;
+cursor: pointer;
+font-size: 17px;
+font-weight: 600;
+color: rgb(46, 171, 175);
+}
+.set-start-btn:hover{
+background-color: rgb(46, 171, 175);
+color: white;
+border:none;
+}
+
+
+.workout{
+    background-color: white;
+    padding: 4px;
+    height: 60px;
+    margin: 14px 0px; 
+    border-radius: 10px;
+}
+.workout-text{
+    float: left;
+    font-size: 30px;
+    font-weight: 800;
+    padding: 10px;
+    color: rgb(66, 61, 66);
+}
+        
+.workout-form{
+    float: right;
+    padding: 10px;
+}
+.w-f-m{
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgb(46, 171, 175);
+    outline-color: rgb(46, 171, 175);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.wo-btn{
+width: 170px;
+height: 37px;
+background-color: transparent;
+padding: 3px;
+border:1px solid rgb(46, 171, 175);
+border-radius: 6px;
+cursor: pointer;
+font-size: 17px;
+font-weight: 600;
+color: rgb(46, 171, 175);
+margin: 10px 40vw;
+}
+.wo-btn:hover{
+background-color: rgb(46, 171, 175);
+color: white;
+border:none;
+}
+.workouts-cont{
+    margin: 10px 30vw;
+    /* background-color: tomato; */
+    padding: 30px;
+}
+
+.date-cont{
+    background-color: rgb(14, 224, 67);
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 3px;
+    cursor: pointer;
+}
+.date-cont:hover{
+    background-color: white;
+}
+
+.me-text{
+    color: white;
+    text-align: center;
+    font-weight: 800;
+}
+.me-workout-data{
+    margin:0px 30vw;
+    padding: 45px;
+}
+
+.me-workout{
+    height: 30px;
+    border:1px solid rgba(13, 214, 80, 0.651);
+    padding: 7px;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 6px;
+    color:white;
+    cursor: pointer;
+}
+.me-workout:hover{
+    background-color: white;
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+
+    </nav>
+
+    <div class="workouts-cont">
+        <div class="date-cont">
+            <div class="date">23</div>
+            <div class="month">Feb</div>
+        </div>
+     
+
+</div>
+   <div class="me-text">
+       <div class="total-days">Total Days: <div class="set-workout-reps">23</div></div>
+       <div class="total-exercises">Total Exercise: <div class="set-workout-reps">10</div></div>
+       <div class="total-reps">Total reps: <div class="set-workout-reps">120</div></div>
+   </div>
+
+<div class="me-workout-data">
+    <div class="me-workout">
+        Pushups <div class="set-workout-reps">200</div>
+    </div>
+    <div class="me-workout">
+        Situps <div class="set-workout-reps">130</div>
+    </div>
+    <div class="me-workout">
+        Jumping Jacks <div class="set-workout-reps">50</div>
+    </div>
+    <div class="me-workout">
+        Hangover <div class="set-workout-reps">10</div>
+    </div>
+</div>
+   
+
+</body>
+</html>
