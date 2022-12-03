@@ -1,6 +1,6 @@
 # fitness
 
-Most disgusting app to track your workout, on a F*in laptop.
+Most disgusting app to track your workout, on a laptop in the browser.
 
 have special features to:
     - track your reps done, on specific dates
